@@ -15,11 +15,8 @@ RUN set -xe; \
         firefox \
         pipelight-multi; \
     pipelight-plugin --update; \
-    echo Y | pipelight-plugin --enable silverlight; \
+    pipelight-plugin --accept --enable silverlight; \
     `# Purge apt-get cache` rm -rf /var/lib/apt/lists/*;
-
-# instead of echo Y
-#    pipelight-plugin --accept --enable silverlight; \
 
 COPY setup-and-launch-firefox.sh /usr/local/bin/
 
