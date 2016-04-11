@@ -8,7 +8,7 @@ uid=1000
 uname=firefox
 
 silverlight_test_page=http://bubblemark.com/silverlight2.html
-installation_wizard=https://github.com/findepi/docker/blob/master/firefox-silverlight-pipelight/INSTALL-WIZARD.md
+installation_wizard=https://github.com/findepi/docker.firefox-silverlight-pipelight/blob/master/INSTALL-WIZARD.md
 
 while test $# -gt 0; do
     case "$1" in
