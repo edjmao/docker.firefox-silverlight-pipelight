@@ -13,7 +13,6 @@ To launch the firefox with Silverlight plugin type the following:
 
 ```
 docker_image=findepi/firefox-silverlight-pipelight \
-    && docker pull "${docker_image}" \
     && docker run \
         --interactive --tty --rm \
         `#--env SOCKS_SERVER="socks://172.17.0.1:5080" --env SOCKS_VERSION=5` \
