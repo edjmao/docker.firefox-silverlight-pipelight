@@ -31,6 +31,12 @@ set -x
 useradd --create-home --uid "${uid}" "${uname}"
 cd "/home/${uname}"
 
+# By using fixed location outside of HOME, we allow this to be mounted as
+# persistent volume at run-time.
+mkdir -p /firefox-profile-dir
+chown "${uname}:" /firefox-profile-dir
+ln -s /firefox-profile-dir .mozilla
+
 cat >/usr/local/bin/run-as-user <<EOF
 #/bin/sh
 exec sudo --set-home --preserve-env -u "${uname}" "\$@"
