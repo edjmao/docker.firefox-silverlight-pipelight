@@ -69,6 +69,8 @@ test -t 0 && test -t 1 && {
     echo "  Just in case you want to poke around, I'm dropping you into a shell."
     echo "  To run the browser, use \`run-firefox' command instead of \`firefox'.  This will"
     echo "  run firefox as the '${uname}' user, rather than 'root'."
+    echo "  If you want an interactive shell running as your Docker alter ego, type:"
+    echo "  \`run-as-user bash -l'"
     echo
     exec bash -l
 }
