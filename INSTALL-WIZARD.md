@@ -1,3 +1,8 @@
+# Deprecated
+
+This document is no longer relevant for latest builds. If you see it, update
+your images.
+
 # INSTALL WIZARD
 
 ## TL;DR
