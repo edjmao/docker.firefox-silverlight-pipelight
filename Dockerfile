@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER Piotr Findeisen <piotr.findeisen@gmail.com>
 
 RUN set -xe; \
@@ -12,7 +12,8 @@ RUN set -xe; \
     `# Allow installation of MS corefonts (pipelight dependency)` \
     echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula boolean true | debconf-set-selections; \
     apt-get install -y --install-recommends \
-        firefox \
+	    sudo \
+        firefox=45.0.2+build1-0ubuntu1 \
         pipelight-multi; \
     pipelight-plugin --update; \
     pipelight-plugin --accept --enable silverlight; \
